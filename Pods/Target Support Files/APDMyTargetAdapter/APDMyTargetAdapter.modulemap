@@ -1,0 +1,6 @@
+framework module APDMyTargetAdapter {
+  umbrella header "APDMyTargetAdapter-umbrella.h"
+
+  export *
+  module * { export * }
+}

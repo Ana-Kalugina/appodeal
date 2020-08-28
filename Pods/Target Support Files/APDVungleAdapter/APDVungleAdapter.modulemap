@@ -1,0 +1,6 @@
+framework module APDVungleAdapter {
+  umbrella header "APDVungleAdapter-umbrella.h"
+
+  export *
+  module * { export * }
+}

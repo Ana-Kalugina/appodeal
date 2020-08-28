@@ -1,0 +1,6 @@
+framework module APDAppLovinAdapter {
+  umbrella header "APDAppLovinAdapter-umbrella.h"
+
+  export *
+  module * { export * }
+}

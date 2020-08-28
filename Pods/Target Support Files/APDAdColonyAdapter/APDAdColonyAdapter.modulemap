@@ -1,0 +1,6 @@
+framework module APDAdColonyAdapter {
+  umbrella header "APDAdColonyAdapter-umbrella.h"
+
+  export *
+  module * { export * }
+}

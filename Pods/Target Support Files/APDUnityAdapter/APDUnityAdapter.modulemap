@@ -1,0 +1,6 @@
+framework module APDUnityAdapter {
+  umbrella header "APDUnityAdapter-umbrella.h"
+
+  export *
+  module * { export * }
+}

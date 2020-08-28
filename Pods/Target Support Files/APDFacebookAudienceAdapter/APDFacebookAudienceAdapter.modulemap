@@ -1,0 +1,6 @@
+framework module APDFacebookAudienceAdapter {
+  umbrella header "APDFacebookAudienceAdapter-umbrella.h"
+
+  export *
+  module * { export * }
+}

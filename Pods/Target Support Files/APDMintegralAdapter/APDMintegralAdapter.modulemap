@@ -1,0 +1,6 @@
+framework module APDMintegralAdapter {
+  umbrella header "APDMintegralAdapter-umbrella.h"
+
+  export *
+  module * { export * }
+}

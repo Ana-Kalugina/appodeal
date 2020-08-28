@@ -1,0 +1,6 @@
+framework module APDSmaatoAdapter {
+  umbrella header "APDSmaatoAdapter-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module APDTapjoyAdapter {
+  umbrella header "APDTapjoyAdapter-umbrella.h"
+
+  export *
+  module * { export * }
+}

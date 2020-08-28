@@ -1,0 +1,6 @@
+framework module APDPubnativeAdapter {
+  umbrella header "APDPubnativeAdapter-umbrella.h"
+
+  export *
+  module * { export * }
+}

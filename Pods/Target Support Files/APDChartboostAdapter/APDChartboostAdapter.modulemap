@@ -1,0 +1,6 @@
+framework module APDChartboostAdapter {
+  umbrella header "APDChartboostAdapter-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module APDInMobiAdapter {
+  umbrella header "APDInMobiAdapter-umbrella.h"
+
+  export *
+  module * { export * }
+}

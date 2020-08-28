@@ -1,0 +1,6 @@
+framework module APDAppodealAdExchangeAdapter {
+  umbrella header "APDAppodealAdExchangeAdapter-umbrella.h"
+
+  export *
+  module * { export * }
+}

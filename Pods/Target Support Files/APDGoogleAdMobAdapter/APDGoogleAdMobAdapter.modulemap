@@ -1,0 +1,6 @@
+framework module APDGoogleAdMobAdapter {
+  umbrella header "APDGoogleAdMobAdapter-umbrella.h"
+
+  export *
+  module * { export * }
+}
