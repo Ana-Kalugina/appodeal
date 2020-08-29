@@ -1,3 +1,9 @@
+//
+//  NativeView.swift
+//  AppodealSwiftDemo
+//
+//  Copyright © 2017 appodeal. All rights reserved.
+//
 
 import UIKit
 import Appodeal
@@ -6,7 +12,7 @@ import Appodeal
 final class NativeView: UIView {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var callToAction: UILabel!
-    
+
     @IBOutlet weak var descr: UILabel!
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var mediaContainer: UIView!
@@ -18,7 +24,7 @@ final class NativeView: UIView {
         
         self.icon.layer.cornerRadius = 8.0
         self.icon.layer.masksToBounds = true
-        
+
         self.callToAction.layer.cornerRadius = 8.0
         self.callToAction.layer.masksToBounds = true
     }

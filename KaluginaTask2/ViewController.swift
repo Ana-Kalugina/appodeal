@@ -1,9 +1,3 @@
-//
-//  ViewController.swift
-//  KaluginaTask2
-//
-//  Created by  MAC on 8/27/20.
-//
 
 import UIKit
 import Appodeal
@@ -12,7 +6,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var interstitialPlacementField: UITextField!
     @IBOutlet weak var bannerPlacementField: UITextField!
     @IBOutlet weak var rewardedVPlacementField: UITextField!
-    var count = 0
+    var bannerCount = 0
+    var rewardedVCount = 0
     
     // MARK: Controller Life Cycle
     override func viewDidLoad() {
@@ -35,10 +30,16 @@ class ViewController: UIViewController {
         Appodeal.showAd(.interstitial,
                         forPlacement: placement,
                         rootViewController: self)
+        sender.isUserInteractionEnabled = false
+        sender.backgroundColor = .gray
+        DispatchQueue.main.asyncAfter(deadline: .now() + 60.0) {
+            sender.isUserInteractionEnabled = true
+            sender.backgroundColor = .systemBlue
+        }
+        
     }
     
     @IBAction func bannerTopButtonPressed(_ sender: UIButton) {
-        if count < 5 {
         guard
             let placement = bannerPlacementField.text,
             Appodeal.isInitalized(for: . banner),
@@ -49,27 +50,36 @@ class ViewController: UIViewController {
         Appodeal.showAd(.bannerTop,
                         forPlacement: placement,
                         rootViewController: self)
-            count += 1
-        }
-        else {
+        bannerCount += 1
+        if bannerCount == 5 {
             Appodeal.hideBanner()
-            sender.isEnabled = false
-            sender.backgroundColor = .gray
+            sender.isHidden = true
         }
     }
-
+    
     @IBAction func showRewardedVButtonPressed(_ sender: UIButton) {
+        Appodeal.hideBanner()
         guard
             let placement = rewardedVPlacementField.text,
             Appodeal.isInitalized(for: .rewardedVideo),
             Appodeal.canShow(.rewardedVideo, forPlacement: placement)
-        else {
-            return
+            else {
+                return
         }
         Appodeal.showAd(.rewardedVideo,
                         forPlacement: placement,
                         rootViewController: self)
+        rewardedVCount += 1
+        if rewardedVCount == 3 {
+            sender.isUserInteractionEnabled = false
+            sender.backgroundColor = .gray
+        }
     }
+
+    @IBAction func nativeButtonPressed(_ sender: Any) {
+        Appodeal.hideBanner()
+    }
+
 }
 
 extension ViewController: AppodealInterstitialDelegate {
@@ -79,7 +89,7 @@ extension ViewController: AppodealInterstitialDelegate {
     func interstitialWillPresent() {}
     func interstitialDidDismiss() {}
     func interstitialDidClick() {}
-
+    
 }
 
 extension ViewController: AppodealBannerDelegate {
