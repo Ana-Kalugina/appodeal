@@ -93,7 +93,7 @@
                                 </state>
                                 <connections>
                                     <action selector="nativeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BWK-SX-7Fo"/>
-                                    <segue destination="jHJ-Rc-8gD" kind="presentation" id="k4n-8d-UcS"/>
+                                    <segue destination="AcP-TG-346" kind="presentation" modalPresentationStyle="fullScreen" id="1Zl-o2-itw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -126,12 +126,12 @@
             </objects>
             <point key="canvasLocation" x="139" y="117"/>
         </scene>
-        <!--Native-->
+        <!--Native View Controller-->
         <scene sceneID="gZE-eJ-Iyl">
             <objects>
                 <tableViewController id="jHJ-Rc-8gD" customClass="NativeViewController" customModule="KaluginaTask2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="W5a-Ez-3I3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -143,20 +143,21 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="u0y-9M-O5S">
-                                            <rect key="frame" x="0.0" y="0.5" width="414" height="218"/>
+                                            <rect key="frame" x="157" y="0.5" width="100" height="99"/>
                                             <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="u0y-9M-O5S" secondAttribute="height" multiplier="12:8" id="MKQ-E1-YMj"/>
+                                                <constraint firstAttribute="width" constant="100" id="YXt-Hf-mxn"/>
+                                                <constraint firstAttribute="height" constant="100" id="eTT-k9-zWr"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stack by Appodeal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7io-pH-vgu">
-                                            <rect key="frame" x="20" y="227" width="374" height="0.0"/>
+                                            <rect key="frame" x="20" y="108" width="374" height="19.5"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOG-7G-B4j">
-                                            <rect key="frame" x="20" y="235" width="374" height="0.0"/>
+                                            <rect key="frame" x="20" y="135.5" width="374" height="99.5"/>
                                             <string key="text">Transitioning from working with individual networks to Appodeal was smooth for our team and made things so much easier for us. Our fill rate and eCPMs improved, as well as our overall revenue. And we no longer have to manage ad waterfalls. It’s working out really well.</string>
                                             <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -166,12 +167,11 @@
                                     <constraints>
                                         <constraint firstItem="7io-pH-vgu" firstAttribute="trailing" secondItem="pMa-H2-AFo" secondAttribute="trailingMargin" id="0uM-5W-xhf"/>
                                         <constraint firstItem="FOG-7G-B4j" firstAttribute="top" secondItem="7io-pH-vgu" secondAttribute="bottom" constant="8" id="8FE-5W-DZo"/>
-                                        <constraint firstItem="u0y-9M-O5S" firstAttribute="leading" secondItem="pMa-H2-AFo" secondAttribute="leading" id="ArZ-Me-Zg2"/>
                                         <constraint firstItem="FOG-7G-B4j" firstAttribute="leading" secondItem="pMa-H2-AFo" secondAttribute="leadingMargin" id="Kf5-CD-G0z"/>
                                         <constraint firstItem="7io-pH-vgu" firstAttribute="leading" secondItem="pMa-H2-AFo" secondAttribute="leadingMargin" id="MA2-hC-pdR"/>
+                                        <constraint firstItem="u0y-9M-O5S" firstAttribute="centerX" secondItem="pMa-H2-AFo" secondAttribute="centerX" id="OSb-OJ-xju"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="FOG-7G-B4j" secondAttribute="bottom" constant="8" id="ULR-P7-Y4b"/>
                                         <constraint firstItem="7io-pH-vgu" firstAttribute="top" secondItem="u0y-9M-O5S" secondAttribute="bottom" constant="8" id="Uu5-i8-te9"/>
-                                        <constraint firstAttribute="trailing" secondItem="u0y-9M-O5S" secondAttribute="trailing" id="WSD-rL-bWM"/>
                                         <constraint firstItem="FOG-7G-B4j" firstAttribute="trailing" secondItem="pMa-H2-AFo" secondAttribute="trailingMargin" id="rpn-J8-2XN"/>
                                         <constraint firstItem="u0y-9M-O5S" firstAttribute="top" secondItem="pMa-H2-AFo" secondAttribute="top" id="smq-7r-Edn"/>
                                     </constraints>
@@ -191,16 +191,44 @@
                             <outlet property="delegate" destination="jHJ-Rc-8gD" id="tr5-vy-hsi"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Native" image="tab_native" selectedImage="tab_native" id="Jlz-Us-gvQ"/>
-                    <navigationItem key="navigationItem" id="RWc-vU-W9v"/>
+                    <navigationItem key="navigationItem" id="fye-Wx-IXO">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="xmark" catalog="system" id="nQj-Pd-4G0">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="Uh2-Wl-7UF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HkG-Ck-Aht" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="858" y="117"/>
+            <point key="canvasLocation" x="1586" y="117"/>
+        </scene>
+        <!--Native-->
+        <scene sceneID="Yv1-Pb-Z77">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AcP-TG-346" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Native" image="tab_native" selectedImage="tab_native" id="Jlz-Us-gvQ"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="hqs-2Z-9Hf"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="arrow_dark.png" id="LTq-1c-pdt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jHJ-Rc-8gD" kind="relationship" relationship="rootViewController" id="9ai-mf-rs9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dyC-MX-BjI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886" y="117"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrow_dark.png" width="28" height="28"/>
         <image name="star.circle.fill" catalog="system" width="128" height="121"/>
         <image name="tab_native" width="128" height="128"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
     </resources>
 </document>

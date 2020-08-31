@@ -7,7 +7,7 @@ final class NativeViewController: UITableViewController {
     let defaultCellName = "kASDefaultCell"
     let nativeCellName  = "kASNativeCell"
     let nativePeriod    = 5
-    
+    var sizeForRow: CGFloat!
     @IBOutlet weak var nativeAdContainer: UIView!
     
     private let adCache: NSMapTable <NSIndexPath, APDNativeAd> = NSMapTable.strongToStrongObjects()

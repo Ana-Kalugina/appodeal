@@ -50,11 +50,6 @@ class ViewController: UIViewController {
         Appodeal.showAd(.bannerTop,
                         forPlacement: placement,
                         rootViewController: self)
-        bannerCount += 1
-        if bannerCount == 5 {
-            Appodeal.hideBanner()
-            sender.isHidden = true
-        }
     }
     
     @IBAction func showRewardedVButtonPressed(_ sender: UIButton) {
@@ -96,7 +91,12 @@ extension ViewController: AppodealBannerDelegate {
     func bannerDidLoadAdIsPrecache(_ precache: Bool) {}
     func bannerDidFailToLoadAd() {}
     func bannerDidClick() {}
-    func bannerDidShow() {}
+    func bannerDidShow() {
+        bannerCount += 1
+        if bannerCount == 5 {
+            Appodeal.hideBanner()
+        }
+    }
 }
 
 extension ViewController: AppodealRewardedVideoDelegate {
